@@ -1,0 +1,12 @@
+defaultNamespace: kube-system
+name: multus-cni
+
+dependsOn:
+  - name: multus-crd-adopt
+
+helm:
+  repo: https://rke2-charts.rancher.io
+  chart: rke2-multus
+  version: "v4.2.202"
+  valuesFiles:
+    - values.yaml
