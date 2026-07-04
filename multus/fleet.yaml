@@ -1,6 +1,8 @@
 defaultNamespace: kube-system
 name: multus-cni
 
+keepResources: true
+
 dependsOn:
   - name: multus-crd-adopt
 
